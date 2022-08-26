@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   right: 0;
   width: fit-content;
 
-  @media screen and (min-width: 650px) {
+  @media screen and (min-width: 850px) {
     display: none;
   }
 

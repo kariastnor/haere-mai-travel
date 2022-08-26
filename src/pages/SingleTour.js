@@ -66,12 +66,12 @@ function SingleTour() {
         <div className="text">
           <h2>{selectedTour.name}</h2>
           <p>{selectedTour.longDesc}</p>
-          <Link to="/popular-trips" className="small-btn">
+          <Link to="/popular-trips" className="standard-btn">
             Back to popular trips
           </Link>
           <Link
             to="/contact"
-            className="small-btn"
+            className="standard-btn"
             state={{ destination: selectedTour.name }}
           >
             Contact us about trip

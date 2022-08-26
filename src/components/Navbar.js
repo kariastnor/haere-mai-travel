@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IoMenuOutline } from "react-icons/io5";
-import logo from "../photos/hmt-logo.png";
+import logo from "../data/photos/hmt-logo.png";
 import styled from "styled-components";
 
 function Navbar({ sidebarOpen, setSidebarOpen }) {
@@ -52,6 +52,7 @@ const Wrapper = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 99;
 
   .navbar-width {
     display: flex;
@@ -74,7 +75,7 @@ const Wrapper = styled.nav`
     padding: 0;
   }
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 850px) {
     .navbar-links {
       display: none;
     }
@@ -92,7 +93,7 @@ const Wrapper = styled.nav`
     color: var(--medium-blue-text);
   } */
 
-  @media screen and (min-width: 650px) {
+  @media screen and (min-width: 850px) {
     .sidebar-btn {
       display: none;
     }

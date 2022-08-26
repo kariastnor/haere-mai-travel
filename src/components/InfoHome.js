@@ -7,20 +7,23 @@ import TourOverview from "./TourOverview";
 function InfoHome() {
   return (
     <Wrapper>
-      <h2>Creating dream holidays since 1995</h2>
-      <p>
-        We are an independent travel agency who specialise in creating
-        customised trips in Australia, New Zealand and the Pacific. Our team has
-        extensive knowledge of the region and will help you put together your
-        perfect holiday based on your interests and needs.
-      </p>
-      <h3>Featured trips</h3>
-      <div className="tours-container">
-        {tours
-          .filter((tour) => tour.featured === true)
-          .map((tour) => {
-            return <TourOverview key={tour.id} {...tour} />;
-          })}
+      <div className="content-container">
+        <h2>Creating dream holidays since 1995</h2>
+        <hr />
+        <p>
+          We are a UK based independent travel agency who specialise in creating
+          customised trips in Australia, New Zealand and the Pacific. Our team
+          has extensive knowledge of the region and will help you put together
+          your perfect holiday based on your interests and needs.
+        </p>
+        <h3>Featured trips</h3>
+        <div className="tours-container">
+          {tours
+            .filter((tour) => tour.featured === true)
+            .map((tour) => {
+              return <TourOverview key={tour.id} {...tour} />;
+            })}
+        </div>
       </div>
     </Wrapper>
   );
@@ -31,7 +34,7 @@ const Wrapper = styled.section`
   width: 85vw;
 
   h2 {
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
 
   h3 {

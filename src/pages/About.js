@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import photo from "../data/tropical-beach.JPG";
+// import photo from "../data/photos/tropical-beach.JPG";
 
 function About() {
   return (
@@ -21,7 +21,11 @@ function About() {
             vitae consequatur.
           </p>
         </div>
-        <img src={photo} alt="sdg" className="about-photo" />
+        <img
+          src="https://media.istockphoto.com/photos/successful-business-team-smiling-teamwork-corporate-office-colleague-picture-id1188452509?k=20&m=1188452509&s=612x612&w=0&h=bg9XjAMR2zwIjXFEDLOb7EIKK76RP5RjR5cCLY1sUNQ="
+          alt="sdg"
+          className="about-photo"
+        />
       </div>
     </Wrapper>
   );
@@ -32,7 +36,7 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 3rem;
     margin-top: 6rem;
     width: 85vw;
@@ -41,6 +45,24 @@ const Wrapper = styled.section`
   .about-photo {
     height: 300px;
     margin-left: 4rem;
+  }
+
+  @media screen and (max-width: 1170px) {
+    .about-content {
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+
+    .about-photo {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    .about-photo {
+      height: auto;
+      width: 80vw;
+    }
   }
 `;
 

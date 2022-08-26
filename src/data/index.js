@@ -1,15 +1,15 @@
-import tropicalBeach from "./tropical-beach.JPG";
-import tropicalBeach2 from "./tropical-beach-2.JPG";
-import mountain from "./sheep-and-mountains.jpg";
-import sydneyOperaHouse from "./sydney-opera-house.jpg";
-import edoras from "./edoras.png";
-import hobbiton from "./hobbiton.png";
-import sylvan from "./lake-sylvan.png";
-import wakatipu from "./lake-wakatipu.png";
-import tasmanGlacier from "./tasman-glacier.png";
-import tasmanValley from "./tasman-valley.png";
-import rarotongaBeach from "./rarotonga-beach.png";
-import aitutaki from "./aitutaki.png";
+import tropicalBeach from "./photos/tropical-beach.JPG";
+import tropicalBeach2 from "./photos/tropical-beach-2.JPG";
+import mountain from "./photos/sheep-and-mountains.jpg";
+import sydneyOperaHouse from "./photos/sydney-opera-house.jpg";
+import edoras from "./photos/edoras.png";
+import hobbiton from "./photos/hobbiton.png";
+import sylvan from "./photos/lake-sylvan.png";
+import wakatipu from "./photos/lake-wakatipu.png";
+import tasmanGlacier from "./photos/tasman-glacier.png";
+import tasmanValley from "./photos/tasman-valley.png";
+import rarotongaBeach from "./photos/rarotonga-beach.png";
+import aitutaki from "./photos/aitutaki.png";
 
 export {
   tropicalBeach,

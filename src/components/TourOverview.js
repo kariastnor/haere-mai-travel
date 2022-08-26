@@ -8,7 +8,7 @@ function TourOverview(props) {
       <img src={img[0]} alt={name} className="tour-img" />
       <p className="tour-name">{name}</p>
       <p className="tour-desc">{desc}</p>
-      <Link to={`/tours/${id}`} className="small-btn">
+      <Link to={`/tours/${id}`} className="standard-btn">
         Read more
       </Link>
     </div>

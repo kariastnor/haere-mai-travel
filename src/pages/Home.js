@@ -1,8 +1,10 @@
 import React from "react";
+// import { Link } from "react-router-dom";
 import styled from "styled-components";
 import InfoHome from "../components/InfoHome";
-import Contact from "./Contact";
-import tropicalBeach from "../data/tropical-beach-2.JPG";
+import ContactButton from "../components/ContactButton";
+import tropicalBeach from "../data/photos/tropical-beach-2.JPG";
+import Testimonies from "./Testimonies";
 
 function Home() {
   return (
@@ -16,10 +18,9 @@ function Home() {
           </h3>
         </div>
       </div>
-
       <InfoHome />
-      {/* or a separate component for home page contact? */}
-      <Contact />
+      <Testimonies />
+      <ContactButton />
     </Wrapper>
   );
 }
@@ -72,40 +73,3 @@ const Wrapper = styled.div`
 `;
 
 export default Home;
-
-// const [width, setWidth] = useState({
-//   h1Width: undefined,
-//   hrWidth: undefined,
-//   hrMargin: undefined,
-// });
-
-// HOW DO I GET THE WIDTH OF JUST THE H1 TEXT?
-
-// useEffect(() => {
-// const h1Width = document
-//   .querySelector("h1.home-heading")
-//   .getBoundingClientRect().width;
-// const hrWidth = document.querySelector("hr").getBoundingClientRect().width;
-
-// function handleResize() {
-//   setWidth({
-//     h1Width:
-//       document.querySelector("h1.home-heading").innerText.offsetWidth,
-//     hrWidth: document.querySelector("hr").offsetWidth,
-//     hrMargin: undefined,
-//   });
-//   handleMargin();
-// }
-
-// function handleMargin() {
-//   setWidth((prevState) => {
-//     return {
-//       ...prevState,
-//       hrMargin: prevState.h1Width / 2 - prevState.hrWidth / 2,
-//     };
-//   });
-// }
-//   window.addEventListener("resize", handleResize);
-//   handleResize();
-//   return () => window.removeEventListener("resize", handleResize);
-// }, []);

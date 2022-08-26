@@ -8,6 +8,7 @@ function PopularTrips() {
     <Wrapper className="page">
       <div className="content-container">
         <h2>Popular trips</h2>
+        <hr />
         <p>
           These are some of our most popular trips, but we can also customise an
           itinerary for your needs.
@@ -32,6 +33,7 @@ const Wrapper = styled.section`
     display: grid;
     column-gap: 5rem;
     grid-template-columns: repeat(3, 1fr);
+    margin-top: 4rem;
     row-gap: 5rem;
   }
 `;

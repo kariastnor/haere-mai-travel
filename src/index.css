@@ -30,7 +30,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
   font-family: 'Prata', serif;
   letter-spacing: 0.2rem;
 }
@@ -48,7 +48,7 @@ a {
   text-decoration: none;
 }
 
-.small-btn {
+.standard-btn {
   background-color: var(--medium-blue-text);
   border: none;
   border-radius: 5px;
@@ -76,11 +76,13 @@ ul {
   line-height: 1.5;
 } */
 
-.page hr {
+hr {
   border: none;
-  background-color: var(--dark-blue-text);
+  /* background-color: var(--dark-blue-text); */
+  background-color: var(--medium-blue-text);
   height: 1px;
   margin: 0;
+  margin-bottom: 1.5rem;
   width: 80px;
 }
 
