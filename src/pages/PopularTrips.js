@@ -36,6 +36,24 @@ const Wrapper = styled.section`
     margin-top: 4rem;
     row-gap: 5rem;
   }
+
+  @media screen and (min-width: 1600px) {
+    .photos {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    .photos {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 645px) {
+    .photos {
+      grid-template-columns: 1fr;
+    }
+  }
 `;
 
 export default PopularTrips;

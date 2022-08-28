@@ -7,7 +7,7 @@ function ContactButton() {
     <Wrapper>
       <Link to="/contact">
         <button type="button" className="standard-btn large">
-          Contact us now to start planning your holiday!
+          Contact us now to start planning your&nbsp;holiday!
         </button>
       </Link>
     </Wrapper>
@@ -22,7 +22,15 @@ const Wrapper = styled.section`
     cursor: pointer;
     font-size: 1.2rem;
     margin-bottom: 8rem;
+    margin-top: 1rem;
     padding: 1rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    .large {
+      font-size: 1rem;
+      max-width: 70%;
+    }
   }
 `;
 

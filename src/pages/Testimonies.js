@@ -7,12 +7,18 @@ import { testimonies } from "../data/testimonies";
 function Testimonies() {
   const [index, setIndex] = useState(0);
 
-  // useEffect(() => {
-  //   const slider = setInterval(nextSlide, 5000);
-  //   return () => {
-  //     clearInterval(slider);
-  //   };
-  // }, [index]);
+  useEffect(() => {
+    const slider = setInterval(nextSlide, 5000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
+
+  useEffect(() => {
+    if (window.location.pathname === "/") {
+      document.querySelector(".page").style.justifyContent = "start";
+    }
+  }, []);
 
   function handleClass(ind) {
     let className = "";
@@ -87,8 +93,6 @@ function Testimonies() {
 
 const Wrapper = styled.section`
   .content-container {
-    /* height - 100vh minus top and bottom margin and footer*/
-    /* height: calc(100vh - 13rem); */
     margin: 6rem 0 3rem;
     overflow: hidden;
     position: relative;
@@ -99,23 +103,13 @@ const Wrapper = styled.section`
   .carousel-container {
     background-color: white;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     margin-top: 2rem;
-    /* overflow: hidden; */
-    /* position: relative; */
-    /* height - as content-container but also minus h2 height and this container's top margin */
-    /* height: calc(100vh - 17rem); */
     width: calc(85vw * 3);
   }
 
   article {
     padding: 3rem 4.5rem;
-    /* position: absolute; */
-    /* top: 0; */
-    /* bottom 2rem to counteract the margin top */
-    /* bottom: 2rem; */
-    /* margin: auto; */
-    /* height: fit-content; */
     width: 85vw;
     transition: all 1s ease-in-out;
     display: flex;
@@ -194,6 +188,27 @@ const Wrapper = styled.section`
 
     h1 {
       font-size: 1rem;
+    }
+
+    article {
+      padding: 1.3rem 4rem;
+    }
+  }
+
+  @media screen and (max-width: 540px) {
+    article {
+      flex-direction: column;
+    }
+
+    .left,
+    .right {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 345px) {
+    article {
+      padding: 1rem 3.3rem;
     }
   }
 `;
