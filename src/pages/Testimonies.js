@@ -111,7 +111,7 @@ const Wrapper = styled.section`
   article {
     padding: 3rem 4.5rem;
     width: 85vw;
-    transition: all 1s ease-in-out;
+    transition: all 1s linear;
     display: flex;
     justify-content: center;
     align-items: center;
