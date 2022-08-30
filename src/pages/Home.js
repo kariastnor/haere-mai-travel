@@ -1,9 +1,8 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import styled from "styled-components";
 import InfoHome from "../components/InfoHome";
 import ContactButton from "../components/ContactButton";
-import tropicalBeach from "../data/photos/tropical-beach-2.JPG";
+import tropicalBeach from "../data/photos/tropical-beach-main.jpg";
 import Testimonies from "./Testimonies";
 
 function Home() {
