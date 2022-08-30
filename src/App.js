@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
@@ -16,14 +17,16 @@ function App() {
     <>
       <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       {sidebarOpen && <Sidebar setSidebarOpen={setSidebarOpen} />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="popular-trips" element={<PopularTrips />} />
-        <Route path="tours/:tourId" element={<SingleTour />} />
-        <Route path="testimonies" element={<Testimonies />} />
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="popular-trips" element={<PopularTrips />} />
+          <Route path="tours/:tourId" element={<SingleTour />} />
+          <Route path="testimonies" element={<Testimonies />} />
+        </Routes>
+      </ScrollToTop>
       <Footer />
     </>
   );
