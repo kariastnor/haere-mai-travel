@@ -44,6 +44,12 @@ const Wrapper = styled.div`
     justify-content: center;
   }
 
+  @media only screen and (max-device-width: 1024px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+
   .headings {
     color: white;
     margin: 6rem auto 3rem;

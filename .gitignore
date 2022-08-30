@@ -6,7 +6,7 @@
 .pnp.js
 
 # photos
-/data/photos/large
+/src/data/photos/large
 
 # testing
 /coverage
