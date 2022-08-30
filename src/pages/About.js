@@ -10,10 +10,10 @@ function About() {
           <h2>About Haere Mai Travels</h2>
           <hr />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugit
-            architecto ullam reprehenderit amet vero explicabo quos corporis
-            autem. Incidunt eum est repudiandae unde quisquam magnam temporibus
-            cum tenetur dignissimos.
+            We are a UK based independent travel agency who specialise in
+            creating customised trips in Australia, New Zealand and the Pacific.
+            Our team has extensive knowledge of the region and will help you put
+            together your perfect holiday based on your interests and needs.
           </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
@@ -22,8 +22,8 @@ function About() {
           </p>
         </div>
         <img
-          src="https://media.istockphoto.com/photos/successful-business-team-smiling-teamwork-corporate-office-colleague-picture-id1188452509?k=20&m=1188452509&s=612x612&w=0&h=bg9XjAMR2zwIjXFEDLOb7EIKK76RP5RjR5cCLY1sUNQ="
-          alt="sdg"
+          src="https://images.pexels.com/photos/2476154/pexels-photo-2476154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="beach at sunset"
           className="about-photo"
         />
       </div>
