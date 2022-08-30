@@ -51,12 +51,39 @@ a {
 
 .standard-btn {
   background-color: var(--medium-blue-text);
-  border: none;
+  border: solid 2px;
+  border-color: var(--medium-blue-text);
   border-radius: 5px;
   color: white;
   font-size: 0.9rem;
+  font-weight: 500;
+  height: fit-content;
   padding: 0.7rem;
   width: fit-content;
+}
+
+.standard-btn:hover {
+  background-color: var(--dark-blue-text);
+  border-color: var(--dark-blue-text);
+}
+
+.reverse-btn {
+  background-color: white;
+  border: solid 2px;
+  border-color: var(--medium-blue-text);
+  border-radius: 5px;
+  color: var(--medium-blue-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  height: fit-content;
+  padding: 0.7rem;
+  width: fit-content;
+}
+
+.reverse-btn:hover {
+  background-color: var(--dark-blue-text);
+  border-color: var(--dark-blue-text);
+  color: white;
 }
 
 ul {

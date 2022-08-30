@@ -19,62 +19,65 @@ function Contact() {
   return (
     <Wrapper className="page">
       <div className="contact">
-        <div>
-          <h2>Contact us now to start planning your holiday!</h2>
-          <hr />
-          <p>
-            Provide your details below and one of our travel experts will be in
-            touch to start planning your dream holiday.
-          </p>
-          <p>
-            Alternatively, call us on +44 7911 123456 to talk to one of our team
-            members.
-          </p>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email (required)</label>
-            <input type="email" id="email" name="email" required />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
-            <label htmlFor="destination">
-              What is your desired destination?
-            </label>
-            <input
-              type="text"
-              id="destination"
-              name="destination"
-              value={destination}
-              onChange={(event) => setDestination(event.target.value)}
-            />
-            <ValidationError
-              prefix="Destination"
-              field="destination"
-              errors={state.errors}
-            />
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" cols="50" rows="8" />
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
-            <button
-              type="submit"
-              className="standard-btn"
-              disabled={state.submitting}
-            >
-              Send
-            </button>
-            {state.succeeded && (
-              <p>
-                Thanks for your message! We will be in touch within two business
-                days.
-              </p>
-            )}
-          </form>
-        </div>
+        {state.succeeded ? (
+          <div className="success">
+            <h4>
+              Thanks for your message! We will be in touch within two business
+              days.
+            </h4>
+          </div>
+        ) : (
+          <div>
+            <h2>Contact us now to start planning your holiday!</h2>
+            <hr />
+            <p>
+              Provide your details below and one of our travel experts will be
+              in touch to start planning your dream holiday.
+            </p>
+            <p>
+              Alternatively, call us on +44 7911 123456 to talk to one of our
+              team members.
+            </p>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="email">Email (required)</label>
+              <input type="email" id="email" name="email" required />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+              <label htmlFor="destination">
+                What is your desired destination?
+              </label>
+              <input
+                type="text"
+                id="destination"
+                name="destination"
+                value={destination}
+                onChange={(event) => setDestination(event.target.value)}
+              />
+              <ValidationError
+                prefix="Destination"
+                field="destination"
+                errors={state.errors}
+              />
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" cols="50" rows="8" />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+              <button
+                type="submit"
+                className="standard-btn"
+                disabled={state.submitting}
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        )}
         <aside>
           <p>53 Sherwood Road</p>
           <p>SOUTHAMPTON</p>
@@ -93,15 +96,24 @@ function Contact() {
 
 const Wrapper = styled.section`
   .contact {
-    /* display: flex;
-    flex-direction: column; */
     display: grid;
     column-gap: 3rem;
     grid-template-columns: 70% auto;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 3rem;
     margin-top: 6rem;
     width: 85vw;
+  }
+
+  .success {
+    align-items: center;
+    /* background-color: white; */
+    display: flex;
+    justify-content: start;
+  }
+
+  h4 {
+    color: var(--medium-blue-text);
   }
 
   aside {

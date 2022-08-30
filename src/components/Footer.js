@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <p>Copyright © Haere Mai Tours {new Date().getFullYear()}</p>
+      <p>© {new Date().getFullYear()} Haere Mai Travel</p>
     </footer>
   );
 }

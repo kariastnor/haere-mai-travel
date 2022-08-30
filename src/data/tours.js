@@ -11,6 +11,13 @@ import {
   tasmanValley,
   rarotongaBeach,
   aitutaki,
+  melbourne,
+  aitutakiKayaks,
+  portDouglas,
+  queenslandStream,
+  noosa,
+  brisbane,
+  rotoiti,
 } from "./index.js";
 
 export const tours = [
@@ -23,10 +30,9 @@ export const tours = [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum esse in beatae atque aliquid nulla, nemo quas vero, itaque deserunt nam quibusdam numquam, tenetur id vitae cumque culpa saepe? Praesentium aspernatur quia voluptate? Dolores dignissimos sunt mollitia, quam tempora esse.",
     img: [
       sydneyOperaHouse,
-      sydneyOperaHouse,
-      sydneyOperaHouse,
-      sydneyOperaHouse,
-      sydneyOperaHouse,
+      "https://ygt-res.cloudinary.com/image/upload/c_fit,h_1280,q_80,w_1920/v1614087222/Venues/Shangri-La%20Hotel%20Sydney/shangri-la-hotel-sydney-3.jpg",
+      melbourne,
+      "https://live.staticflickr.com/834/28708042627_4a7f0d721a_b.jpg",
     ],
   },
   {
@@ -36,7 +42,7 @@ export const tours = [
     desc: "Visit the most spectacular sites in a round-trip around the South Island",
     longDesc:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum esse in beatae atque aliquid nulla, nemo quas vero, itaque deserunt nam quibusdam numquam, tenetur id vitae cumque culpa saepe? Praesentium aspernatur quia voluptate? Dolores dignissimos sunt mollitia, quam tempora esse.",
-    img: [mountain, wakatipu, tasmanGlacier, tasmanValley],
+    img: [mountain, wakatipu, tasmanGlacier, rotoiti, tasmanValley],
   },
   {
     id: 3,
@@ -45,7 +51,13 @@ export const tours = [
     desc: "Experience the beautiful scenery and cultures of the South Pacific",
     longDesc:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum esse in beatae atque aliquid nulla, nemo quas vero, itaque deserunt nam quibusdam numquam, tenetur id vitae cumque culpa saepe? Praesentium aspernatur quia voluptate? Dolores dignissimos sunt mollitia, quam tempora esse.",
-    img: [tropicalBeach, aitutaki, tropicalBeach2, rarotongaBeach],
+    img: [
+      tropicalBeach,
+      aitutaki,
+      tropicalBeach2,
+      rarotongaBeach,
+      aitutakiKayaks,
+    ],
   },
   {
     id: 4,
@@ -64,11 +76,9 @@ export const tours = [
     longDesc:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum esse in beatae atque aliquid nulla, nemo quas vero, itaque deserunt nam quibusdam numquam, tenetur id vitae cumque culpa saepe? Praesentium aspernatur quia voluptate? Dolores dignissimos sunt mollitia, quam tempora esse.",
     img: [
-      sydneyOperaHouse,
-      sydneyOperaHouse,
-      sydneyOperaHouse,
-      sydneyOperaHouse,
-      sydneyOperaHouse,
+      "https://www.qantas.com/content/travelinsider/en/explore/south-pacific/fiji/things-to-know-before-you-go-to-fiji/_jcr_content/parsysTop/hero.img.full.medium.jpg/1543466853365.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Tavarua_Island%2C_Fiji.JPG/1200px-Tavarua_Island%2C_Fiji.JPG?20120326013229",
+      "https://media.istockphoto.com/photos/empty-hammock-in-the-shade-of-palm-trees-fiji-picture-id522727074?k=20&m=522727074&s=612x612&w=0&h=WbN98s9NDQwpXLE7qqoeYgmQ1tVvGSJ3VpOlbw13DT0=",
     ],
   },
   {
@@ -78,12 +88,6 @@ export const tours = [
     desc: "Do a road trip from Brisbane to the tropical rainforests in the northeast",
     longDesc:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum esse in beatae atque aliquid nulla, nemo quas vero, itaque deserunt nam quibusdam numquam, tenetur id vitae cumque culpa saepe? Praesentium aspernatur quia voluptate? Dolores dignissimos sunt mollitia, quam tempora esse.",
-    img: [
-      sydneyOperaHouse,
-      sydneyOperaHouse,
-      sydneyOperaHouse,
-      sydneyOperaHouse,
-      sydneyOperaHouse,
-    ],
+    img: [portDouglas, queenslandStream, noosa, brisbane],
   },
 ];

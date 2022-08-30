@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 function Sidebar({ setSidebarOpen }) {
@@ -7,21 +7,20 @@ function Sidebar({ setSidebarOpen }) {
     <Wrapper onClick={() => setSidebarOpen(false)}>
       <div className="sidebar">
         <ul className="sidebar-links">
-          <hr />
           <li onClick={() => setSidebarOpen(false)}>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li onClick={() => setSidebarOpen(false)}>
-            <Link to="/about">About us</Link>
+            <NavLink to="/about">About us</NavLink>
           </li>
           <li onClick={() => setSidebarOpen(false)}>
-            <Link to="/popular-trips">Popular trips</Link>
+            <NavLink to="/popular-trips">Popular trips</NavLink>
           </li>
           <li onClick={() => setSidebarOpen(false)}>
-            <Link to="/testimonies">Testimonies</Link>
+            <NavLink to="/testimonies">Testimonies</NavLink>
           </li>
           <li onClick={() => setSidebarOpen(false)}>
-            <Link to="/contact">Contact us</Link>
+            <NavLink to="/contact">Contact us</NavLink>
           </li>
         </ul>
       </div>
@@ -67,6 +66,15 @@ const Wrapper = styled.div`
 
   li:not(:last-child) {
     margin-bottom: 1rem;
+  }
+
+  a:hover {
+    color: var(--medium-blue-text);
+  }
+
+  .active {
+    border-bottom: 1px solid var(--medium-blue-text);
+    padding-bottom: 0.5rem;
   }
 
   @media screen and (max-width: 550px) {

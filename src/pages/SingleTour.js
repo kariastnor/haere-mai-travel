@@ -28,25 +28,27 @@ function SingleTour() {
     <Wrapper className="page">
       <div className="content-container">
         <div className="images">
-          <button
-            type="button"
-            className="left"
-            onClick={() => handleMainImg("left")}
-          >
-            <FaChevronLeft />
-          </button>
-          <button
-            type="button"
-            className="right"
-            onClick={() => handleMainImg("right")}
-          >
-            <FaChevronRight />
-          </button>
-          <img
-            src={selectedTour.img[mainImg]}
-            alt={selectedTour.name}
-            className="main-img"
-          />
+          <div className="main-img-container">
+            <img
+              src={selectedTour.img[mainImg]}
+              alt={selectedTour.name}
+              className="main-img"
+            />
+            <button
+              type="button"
+              className="left"
+              onClick={() => handleMainImg("left")}
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              type="button"
+              className="right"
+              onClick={() => handleMainImg("right")}
+            >
+              <FaChevronRight />
+            </button>
+          </div>
           <div className="small-images">
             {selectedTour.img.map((image, index) => {
               return (
@@ -65,17 +67,20 @@ function SingleTour() {
         </div>
         <div className="text">
           <h2>{selectedTour.name}</h2>
+          <hr />
           <p>{selectedTour.longDesc}</p>
-          <Link to="/popular-trips" className="standard-btn">
-            Back to popular trips
-          </Link>
-          <Link
-            to="/contact"
-            className="standard-btn"
-            state={{ destination: selectedTour.name }}
-          >
-            Contact us about trip
-          </Link>
+          <div className="links">
+            <Link to="/popular-trips" className="standard-btn">
+              Back to popular trips
+            </Link>
+            <Link
+              to="/contact"
+              className="reverse-btn"
+              state={{ destination: selectedTour.name }}
+            >
+              Contact us about trip
+            </Link>
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -87,37 +92,29 @@ const Wrapper = styled.article`
     column-gap: 2rem;
     display: flex;
     justify-content: space-between;
-    margin: 6rem 0 3rem;
+    margin: 8rem 0 4rem;
     width: 85vw;
   }
 
-  h2 {
+  h2,
+  p {
     margin-top: 0;
   }
 
   .images {
-    position: relative;
     width: 50%;
   }
 
   .text {
     display: flex;
     flex-direction: column;
+    justify-content: start;
     width: 50%;
   }
 
-  a {
-    margin-top: 2rem;
+  .main-img-container {
+    position: relative;
   }
-
-  /* p {
-    margin-bottom: 2rem;
-  }
-
-  a:first-child {
-    margin-right: 3rem;
-    margin-bottom: 2rem;
-  } */
 
   .main-img {
     width: 100%;
@@ -131,9 +128,12 @@ const Wrapper = styled.article`
     color: #ffffff;
     cursor: pointer;
     font-size: 3rem;
-    padding: 0.5rem 0.2rem 0.1rem 0.1rem;
+    height: fit-content;
+    padding: 0.5rem 0.2rem 0 0;
     position: absolute;
-    top: 40%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
 
   .left {
@@ -163,6 +163,44 @@ const Wrapper = styled.article`
 
   .small-img {
     width: 100%;
+  }
+
+  .links {
+    display: flex;
+    column-gap: 2rem;
+    margin-top: 2rem;
+    row-gap: 2rem;
+  }
+
+  @media screen and (max-width: 1090px) {
+    .content-container {
+      /* align-items: center; */
+      flex-direction: column;
+    }
+
+    .images {
+      margin-bottom: 3rem;
+      width: 450px;
+    }
+
+    .text {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 535px) {
+    .images {
+      width: 100%;
+    }
+
+    .links {
+      flex-wrap: wrap;
+    }
+
+    .left,
+    .right {
+      font-size: 2rem;
+    }
   }
 `;
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { IoMenuOutline } from "react-icons/io5";
 import logo from "../data/photos/hmt-logo.png";
 import styled from "styled-components";
@@ -21,19 +21,19 @@ function Navbar({ sidebarOpen, setSidebarOpen }) {
           </button>
           <ul className="navbar-links">
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/about">About us</Link>
+              <NavLink to="/about">About us</NavLink>
             </li>
             <li>
-              <Link to="/popular-trips">Popular trips</Link>
+              <NavLink to="/popular-trips">Popular trips</NavLink>
             </li>
             <li>
-              <Link to="/testimonies">Testimonies</Link>
+              <NavLink to="/testimonies">Testimonies</NavLink>
             </li>
             <li>
-              <Link to="/contact">Contact us</Link>
+              <NavLink to="/contact">Contact us</NavLink>
             </li>
           </ul>
         </div>
@@ -75,6 +75,15 @@ const Wrapper = styled.nav`
     padding: 0;
   }
 
+  a:hover {
+    color: var(--medium-blue-text);
+  }
+
+  .active {
+    border-bottom: 1px solid var(--medium-blue-text);
+    padding-bottom: 0.5rem;
+  }
+
   @media screen and (max-width: 850px) {
     .navbar-links {
       display: none;
@@ -85,13 +94,14 @@ const Wrapper = styled.nav`
     background-color: transparent;
     border: none;
     color: var(--dark-blue-text);
+    cursor: pointer;
     font-size: 3rem;
     padding: 0.3rem 0 0 0;
   }
 
-  /* .sidebar-btn:hover {
+  .sidebar-btn:hover {
     color: var(--medium-blue-text);
-  } */
+  }
 
   @media screen and (min-width: 850px) {
     .sidebar-btn {

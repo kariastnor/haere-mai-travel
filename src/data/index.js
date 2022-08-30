@@ -10,6 +10,13 @@ import tasmanGlacier from "./photos/tasman-glacier.png";
 import tasmanValley from "./photos/tasman-valley.png";
 import rarotongaBeach from "./photos/rarotonga-beach.png";
 import aitutaki from "./photos/aitutaki.png";
+import melbourne from "./photos/melbourne.jpg";
+import aitutakiKayaks from "./photos/aitutaki-kayaks.jpg";
+import portDouglas from "./photos/port-douglas.jpg";
+import queenslandStream from "./photos/queensland-stream.jpg";
+import noosa from "./photos/noosa.jpg";
+import brisbane from "./photos/brisbane.jpg";
+import rotoiti from "./photos/rotoiti.jpg";
 
 export {
   tropicalBeach,
@@ -24,4 +31,11 @@ export {
   tasmanValley,
   rarotongaBeach,
   aitutaki,
+  melbourne,
+  aitutakiKayaks,
+  portDouglas,
+  queenslandStream,
+  noosa,
+  brisbane,
+  rotoiti,
 };
