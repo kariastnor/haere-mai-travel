@@ -1,3 +1,9 @@
+# Comment on project
+
+This website was created with React, including React Router and styled components. The contact form is also integrated with Formspree and is set up to send an email when the user submits the form.
+
+Instructions from React below.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
